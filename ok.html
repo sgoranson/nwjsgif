@@ -302,11 +302,12 @@
                 //let mydir = path.dirname(nw.App.argv[0])
                 let mydir = nw.App.argv[0]
                 //console.log('SPG3: ' + mydir) 
-                mydir = path.relative('.', mydir)
-                console.log('SPG4: ' + mydir) 
+                // mydir = path.relative('.', mydir)
+                //console.log('SPG4: ' + mydir) 
 
                 PICS = fs.readdirSync(mydir)
                     .map(pic => path.join(mydir, pic))
+                    .map(fname => 'file://' + fname)
                 console.log(JSON.stringify(PICS));
 
                 setupGallery(1);
