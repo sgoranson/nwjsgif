@@ -1,0 +1,6 @@
+{
+  "name": "nw-demo2",
+  "version": "0.0.2",
+  "main": "ok.html",
+ "chromium-args": "--enable-logging=stderr"
+}

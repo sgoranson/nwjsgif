@@ -1,0 +1,3 @@
+== nwjsgif
+
+nwjsgif:: nw.js script to view a directory of gif(or any) image files. less CPU heavy vs. real chrome 
