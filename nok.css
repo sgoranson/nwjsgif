@@ -1,0 +1,66 @@
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 10px;
+        font-family: Arial;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+      /* Create four equal columns that sits next to each other */
+
+      .row img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+
+      /*    @media (max-width: 200px) {
+          .column {
+              flex: 50%;
+              max-width: 50%;
+          }
+    }
+     */
+      .row {
+        flex: 33%;
+        max-width: 33%;
+      }
+
+      /* lightbox css */
+
+      .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /* needed for animation */
+        left: 0;
+        top: 0;
+        /* Sit on top */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Black w/ opacity */
+      }
+
+      .center {
+        text-align: center;
+      }
+
