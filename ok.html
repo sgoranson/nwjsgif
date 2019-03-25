@@ -273,6 +273,10 @@
             window.scrollBy(0,50);
         } else if (event.keyCode === 75) {
             window.scrollBy(0,-50);
+        } else if (event.keyCode === 70) {
+            window.scrollBy(0,100);
+        } else if (event.keyCode === 65) {
+            window.scrollBy(0,-100);
         } else if (event.keyCode === 73) {
             var zoomPercent = 150;
             win.zoomLevel = Math.log(zoomPercent/100) / Math.log(1.2);
@@ -283,8 +287,7 @@
 
       };
 
-      for (let arg in nw.App.argv) {
-        console.log("SPG2: " + nw.App.argv[arg]);
+        console.log("SPG3: " + nw.App.argv[0]);
 
         //let mydir = path.dirname(nw.App.argv[0])
         let mydir = nw.App.argv[0];
@@ -299,7 +302,6 @@
         console.log(JSON.stringify(PICS));
 
         setupGallery(1);
-      }
     </script>
   </body>
 </html>
