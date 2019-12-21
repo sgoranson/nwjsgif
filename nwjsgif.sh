@@ -4,4 +4,4 @@
 DIR="$(dirname $(readlink -f $0))"
 echo $DIR
 DIR2="$(readlink -f "$@")"
-command nw "$DIR" "$DIR2"
+command nw.exe "$DIR" "$DIR2"
