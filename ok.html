@@ -143,6 +143,7 @@
     let myPic = document.getElementById("myPic");
     let PICS = [];
 
+
     //let PICS = fs.readdirSync(mydir)
     //   .map(pic => path.join(mydir, pic))
 
@@ -196,36 +197,61 @@
 
       /* now fill it all in again */
 
-      let currentImg = 0;
+        let currentImg = 0;
 
-      / * smart shuffle! */;
-      /*
-                       for (let i = PICS.length - 1; i > 0; i -= 1) {
-                           let j = Math.floor(Math.random() * (i + 1));
-                           let temp = PICS[i];
-                           PICS[i] = PICS[j];
-                           PICS[j] = temp;
-                       }
-       */
-      for (let i = 0; i < PICS.length; i++) {
-        let n = document.createElement("img");
-        // n.src = PICS[startImg + i];
-        n.src = PICS[i];
-        n.alt = i;
-        n.classList.add("pix");
+        / * smart shuffle! */;
+        /*
+                         for (let i = PICS.length - 1; i > 0; i -= 1) {
+                             let j = Math.floor(Math.random() * (i + 1));
+                             let temp = PICS[i];
+                             PICS[i] = PICS[j];
+                             PICS[j] = temp;
+                         }
+         */
+        for (let i = 0; i < PICS.length; i++) {
+            if (PICS[i].split('.').pop() === 'mp4') {
+                console.log('got mp4');
+                let n = document.createElement("video");
+                n.loop = true;
+                n.autoplay = true;
+                n.muted = true;
+                n.alt = i;
+                n.style = "width:100%";
+                let m = document.createElement("source");
+                m.src = PICS[i];
+                m.type = "video/mp4";
+                n.appendChild(m);
 
-        n.onclick = function () {
-          document.getElementById("msgs").innerHTML += "<BR>" + this.src;
-          console.log("SPG: " + this.src);
-          document.getElementById("myPic").src = this.src;
-          document.getElementById("myPic").alt = this.alt;
-          document.getElementById("myModal").style.display = "block";
-        };
+                
+                n.onclick = function () {
+                    document.getElementById("msgs").innerHTML += "<BR>" + this.src;
+                    console.log("SPG: " + this.src);
+                    document.getElementById("myPic").src = this.src;
+                    document.getElementById("myPic").alt = this.alt;
+                    document.getElementById("myModal").style.display = "block";
+                };
+                initRow.getElementsByClassName("column")[i % 3].appendChild(n);
+            } else {
 
-        n.style = "width:100%";
-        // console.log('SPG1: ' + xx + ' pageNum: ' + pageNum + ' img#: ' + n.alt);
-        initRow.getElementsByClassName("column")[i % 3].appendChild(n);
-      }
+                let n = document.createElement("img");
+                // n.src = PICS[startImg + i];
+                n.src = PICS[i];
+                n.alt = i;
+                n.classList.add("pix");
+
+                n.onclick = function () {
+                    document.getElementById("msgs").innerHTML += "<BR>" + this.src;
+                    console.log("SPG: " + this.src);
+                    document.getElementById("myPic").src = this.src;
+                    document.getElementById("myPic").alt = this.alt;
+                    document.getElementById("myModal").style.display = "block";
+                };
+
+                n.style = "width:100%";
+                // console.log('SPG1: ' + xx + ' pageNum: ' + pageNum + ' img#: ' + n.alt);
+                initRow.getElementsByClassName("column")[i % 3].appendChild(n);
+            }
+        }
     };
 
     /* press the first page */
