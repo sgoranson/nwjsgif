@@ -3,345 +3,345 @@
 <html lang="en">
 
 <head>
-  <title>test flex</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <title>test flex</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
 
-    /* Create four equal columns that sits next to each other */
-    .column {
-      flex: 33%;
-      max-width: 33%;
-      padding: 0 4px;
-    }
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 33%;
+            max-width: 33%;
+            padding: 0 4px;
+        }
 
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-    }
-
-
-    body {
-      margin: 10px;
-      font-family: Arial;
-    }
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
 
 
-    /* lightbox css */
+        body {
+            margin: 10px;
+            font-family: Arial;
+        }
 
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      /* needed for animation */
-      left: 0;
-      top: 0;
-      /* Sit on top */
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.7);
-      /* Black w/ opacity */
-    }
 
-    .center {
-      text-align: center;
-    }
+        /* lightbox css */
 
-    .pagination {
-      display: inline-block;
-    }
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* needed for animation */
+            left: 0;
+            top: 0;
+            /* Sit on top */
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black w/ opacity */
+        }
 
-    #pages {
-      display: inline;
-    }
+        .center {
+            text-align: center;
+        }
 
-    .pagination a {
-      color: black;
-      float: left;
-      padding: 8px 16px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      border: 1px solid #ddd;
-      margin: 0 4px;
-    }
+        .pagination {
+            display: inline-block;
+        }
 
-    .pagination a.active {
-      background-color: #4caf50;
-      color: white;
-      border: 1px solid #4caf50;
-    }
+        #pages {
+            display: inline;
+        }
 
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-    }
-  </style>
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        .pagination a.active {
+            background-color: #4caf50;
+            color: white;
+            border: 1px solid #4caf50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="myModal" class="modal">
-    <img id="myPic" src="./mine/00032.gif"
-      style="display: block; margin-left: auto; margin-right: auto; height: 100%" />
-  </div>
-
-  <div class="center">
-    <div class="pagination">
-      <a id="twobut" href="#">two</a>
-      <a id="threebut" href="#">three</a>
-      <a id="fourbut" href="#">four</a>
-      <a href="#">&laquo;</a>
-      <div id="pages"></div>
-      <a href="#">&raquo;</a>
+    <div id="myModal" class="modal">
+        <img id="myPic" src="./mine/00032.gif"
+            style="display: block; margin-left: auto; margin-right: auto; height: 100%" />
     </div>
-  </div>
 
-  <!-- <div id="blankrow" class="row" style="display:'none';"> -->
-  <!--     <div  class="column"></div> -->
-  <!--     <div  class="column"></div> -->
-  <!--     <div  class="column"></div> -->
-  <!--     <div  class="column"></div> -->
-  <!-- </div> -->
+    <div class="center">
+        <div class="pagination">
+            <a id="twobut" href="#">two</a>
+            <a id="threebut" href="#">three</a>
+            <a id="fourbut" href="#">four</a>
+            <a href="#">&laquo;</a>
+            <div id="pages"></div>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
 
-  <input type="file" nwworkingdir="D:\dropbox" />
-  <a id="loadit" href="#">load</a>
+    <!-- <div id="blankrow" class="row" style="display:'none';"> -->
+    <!--     <div  class="column"></div> -->
+    <!--     <div  class="column"></div> -->
+    <!--     <div  class="column"></div> -->
+    <!--     <div  class="column"></div> -->
+    <!-- </div> -->
 
-  <div id="row0" class="row">
-    <div class="column"></div>
-    <div class="column"></div>
-    <div class="column"></div>
-  </div>
+    <input type="file" nwworkingdir="D:\dropbox" />
+    <a id="loadit" href="#">load</a>
 
-  <div id="msgs"></div>
+    <div id="row0" class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
 
-  <script type="text/javascript">
-    "use strict";
+    <div id="msgs"></div>
 
-    console.log("histeve");
+    <script type="text/javascript">
+        "use strict";
 
-    var win = nw.Window.get();
+        console.log("histeve");
 
-    let fs = require("fs");
-    let path = require("path");
+        var win = nw.Window.get();
 
-    let modal = document.getElementById("myModal");
-    let myPic = document.getElementById("myPic");
-    let PICS = [];
+        let fs = require("fs");
+        let path = require("path");
+
+        let modal = document.getElementById("myModal");
+        let myPic = document.getElementById("myPic");
+        let PICS = [];
 
 
-    //let PICS = fs.readdirSync(mydir)
-    //   .map(pic => path.join(mydir, pic))
+        //let PICS = fs.readdirSync(mydir)
+        //   .map(pic => path.join(mydir, pic))
 
-    document.getElementById("loadit").onclick = function (event) {
-      let fileinput = document.querySelector("input[type=file]");
-      let mydir = path.dirname(fileinput.value);
-      mydir = path.relative(".", mydir);
+        document.getElementById("loadit").onclick = function (event) {
+            let fileinput = document.querySelector("input[type=file]");
+            let mydir = path.dirname(fileinput.value);
+            mydir = path.relative(".", mydir);
 
-      PICS = fs.readdirSync(mydir).map(pic => path.join(mydir, pic));
-      console.log(JSON.stringify(PICS));
+            PICS = fs.readdirSync(mydir).map(pic => path.join(mydir, pic));
+            console.log(JSON.stringify(PICS));
 
-      setupGallery(1);
-    };
+            setupGallery(1);
+        };
 
-    document.getElementById("fourbut").onclick = function (event) {
-      let elms = document.getElementsByClassName("column");
-      let elmsSize = document.getElementsByClassName("column").length;
+        document.getElementById("fourbut").onclick = function (event) {
+            let elms = document.getElementsByClassName("column");
+            let elmsSize = document.getElementsByClassName("column").length;
 
-      for (let i = 0; i < elmsSize; i++) {
-        elms[i].style.flex = "33%";
-      }
-    };
-
-    document.getElementById("twobut").onclick = function (event) {
-      let elms = document.getElementsByClassName("column");
-      let elmsSize = document.getElementsByClassName("column").length;
-
-      for (let i = 0; i < elmsSize; i++) {
-        elms[i].style.flex = "50%";
-      }
-    };
-
-    let MAX_PER_PAGE = 6000;
-    let pageCount = Math.floor(PICS.length / MAX_PER_PAGE) + 1;
-
-    let setupGallery = function (pageNum) {
-      pageNum = parseInt(pageNum);
-
-      /* kill the old data */
-      let initRow = document.getElementById("row0");
-      while (initRow.firstChild) {
-        initRow.removeChild(initRow.firstChild);
-      }
-
-      let nx = document.createElement("div");
-      nx.classList.add("column");
-
-      initRow.appendChild(nx.cloneNode(false));
-      initRow.appendChild(nx.cloneNode(false));
-      initRow.appendChild(nx.cloneNode(false));
-
-      /* now fill it all in again */
-
-        let currentImg = 0;
-
-        / * smart shuffle! */;
-        /*
-                         for (let i = PICS.length - 1; i > 0; i -= 1) {
-                             let j = Math.floor(Math.random() * (i + 1));
-                             let temp = PICS[i];
-                             PICS[i] = PICS[j];
-                             PICS[j] = temp;
-                         }
-         */
-        for (let i = 0; i < PICS.length; i++) {
-            if (PICS[i].split('.').pop() === 'mp4') {
-                console.log('got mp4');
-                let n = document.createElement("video");
-                n.loop = true;
-                n.autoplay = true;
-                n.muted = true;
-                n.alt = i;
-                n.style = "width:100%";
-                let m = document.createElement("source");
-                m.src = PICS[i];
-                m.type = "video/mp4";
-                n.appendChild(m);
-
-                
-                n.onclick = function () {
-                    document.getElementById("msgs").innerHTML += "<BR>" + this.src;
-                    console.log("SPG: " + this.src);
-                    document.getElementById("myPic").src = this.src;
-                    document.getElementById("myPic").alt = this.alt;
-                    document.getElementById("myModal").style.display = "block";
-                };
-                initRow.getElementsByClassName("column")[i % 3].appendChild(n);
-            } else {
-
-                let n = document.createElement("img");
-                // n.src = PICS[startImg + i];
-                n.src = PICS[i];
-                n.alt = i;
-                n.classList.add("pix");
-
-                n.onclick = function () {
-                    document.getElementById("msgs").innerHTML += "<BR>" + this.src;
-                    console.log("SPG: " + this.src);
-                    document.getElementById("myPic").src = this.src;
-                    document.getElementById("myPic").alt = this.alt;
-                    document.getElementById("myModal").style.display = "block";
-                };
-
-                n.style = "width:100%";
-                // console.log('SPG1: ' + xx + ' pageNum: ' + pageNum + ' img#: ' + n.alt);
-                initRow.getElementsByClassName("column")[i % 3].appendChild(n);
+            for (let i = 0; i < elmsSize; i++) {
+                elms[i].style.flex = "33%";
             }
-        }
-    };
+        };
 
-    /* press the first page */
-    //let pageOne = document.getElementById('pages').getElementsByTagName('a')[0];
-    //pageOne.classList.add('active');
+        document.getElementById("twobut").onclick = function (event) {
+            let elms = document.getElementsByClassName("column");
+            let elmsSize = document.getElementsByClassName("column").length;
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      } else {
-        console.log('hihihi');
-        // ArrowRight
+            for (let i = 0; i < elmsSize; i++) {
+                elms[i].style.flex = "50%";
+            }
+        };
 
-        myPic.alt = parseInt(myPic.alt) + 1;
-        myPic.src = PICS[parseInt(myPic.alt)];
-        modal.style.display = "block";
+        let MAX_PER_PAGE = 6000;
+        let pageCount = Math.floor(PICS.length / MAX_PER_PAGE) + 1;
 
-      }
-    };
+        let setupGallery = function (pageNum) {
+            pageNum = parseInt(pageNum);
 
-    window.oncontextmenu = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      } else {
-        console.log('nonono');
-        // ArrowRight
+            /* kill the old data */
+            let initRow = document.getElementById("row0");
+            while (initRow.firstChild) {
+                initRow.removeChild(initRow.firstChild);
+            }
 
-        myPic.alt = parseInt(myPic.alt) - 1;
-        myPic.src = PICS[parseInt(myPic.alt)];
-        modal.style.display = "block";
+            let nx = document.createElement("div");
+            nx.classList.add("column");
 
-      }
-    };
+            initRow.appendChild(nx.cloneNode(false));
+            initRow.appendChild(nx.cloneNode(false));
+            initRow.appendChild(nx.cloneNode(false));
 
-    // handy esc,arrowkey browsing
-    document.onkeydown = function (event) {
-      if (event.keyCode === 27) {
-        // escape
+            /* now fill it all in again */
 
-        document.getElementById("myModal").style.display = "none";
-      } else if (event.keyCode === 76 || event.keyCode === 39) {
-        // ArrowRight
+            let currentImg = 0;
 
-        myPic.alt = parseInt(myPic.alt) + 1;
-        myPic.src = PICS[parseInt(myPic.alt)];
-        modal.style.display = "block";
+            / * smart shuffle! */;
+            /*
+                             for (let i = PICS.length - 1; i > 0; i -= 1) {
+                                 let j = Math.floor(Math.random() * (i + 1));
+                                 let temp = PICS[i];
+                                 PICS[i] = PICS[j];
+                                 PICS[j] = temp;
+                             }
+             */
+            for (let i = 0; i < PICS.length; i++) {
+                if (PICS[i].split('.').pop() === 'mp4') {
+                    console.log('got mp4');
+                    let n = document.createElement("video");
+                    n.loop = true;
+                    n.autoplay = true;
+                    n.muted = true;
+                    n.alt = i;
+                    n.style = "width:100%";
+                    let m = document.createElement("source");
+                    m.src = PICS[i];
+                    m.type = "video/mp4";
+                    n.appendChild(m);
 
-        console.log("SPG: alt: " + myPic.alt + " src: " + myPic.src);
-      } else if (event.keyCode === 72 || event.keyCode === 37) {
-        // ArrowLeft
 
-        myPic.alt = parseInt(myPic.alt) - 1;
-        myPic.src = PICS[parseInt(myPic.alt)];
-        modal.style.display = "block";
-        // console.log("SPG: " + event.key + " code: " + event.keyCode)
-      } else if (event.keyCode === 74) {
-        window.scrollBy(0, 50);
-      } else if (event.keyCode === 75) {
-        window.scrollBy(0, -50);
-      } else if (event.keyCode === 70) {
-        window.scrollBy(0, 100);
-      } else if (event.keyCode === 65) {
-        window.scrollBy(0, -100);
-      } else if (event.keyCode === 73) {
-        var zoomPercent = 150;
-        win.zoomLevel = Math.log(zoomPercent / 100) / Math.log(1.2);
-      } else if (event.keyCode === 79) {
-        var zoomPercent = 50;
-        win.zoomLevel = Math.log(zoomPercent / 100) / Math.log(1.2);
-      }
+                    n.onclick = function () {
+                        document.getElementById("msgs").innerHTML += "<BR>" + this.src;
+                        console.log("SPG: " + this.src);
+                        document.getElementById("myPic").src = this.src;
+                        document.getElementById("myPic").alt = this.alt;
+                        document.getElementById("myModal").style.display = "block";
+                    };
+                    initRow.getElementsByClassName("column")[i % 3].appendChild(n);
+                } else {
 
-    };
+                    let n = document.createElement("img");
+                    // n.src = PICS[startImg + i];
+                    n.src = PICS[i];
+                    n.alt = i;
+                    n.classList.add("pix");
 
-    console.log("SPG3: " + nw.App.argv[0]);
+                    n.onclick = function () {
+                        document.getElementById("msgs").innerHTML += "<BR>" + this.src;
+                        console.log("SPG: " + this.src);
+                        document.getElementById("myPic").src = this.src;
+                        document.getElementById("myPic").alt = this.alt;
+                        document.getElementById("myModal").style.display = "block";
+                    };
 
-    //let mydir = path.dirname(nw.App.argv[0])
-    let mydir = nw.App.argv[0];
-    //console.log('SPG3: ' + mydir)
-    // mydir = path.relative('.', mydir)
-    //console.log('SPG4: ' + mydir)
+                    n.style = "width:100%";
+                    // console.log('SPG1: ' + xx + ' pageNum: ' + pageNum + ' img#: ' + n.alt);
+                    initRow.getElementsByClassName("column")[i % 3].appendChild(n);
+                }
+            }
+        };
 
-    PICS = fs
-      .readdirSync(mydir)
-      .map(pic => path.join(mydir, pic))
-      .map(fname => "file://" + fname);
-    console.log(JSON.stringify(PICS));
+        /* press the first page */
+        //let pageOne = document.getElementById('pages').getElementsByTagName('a')[0];
+        //pageOne.classList.add('active');
 
-    setupGallery(1);
-  </script>
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            } else {
+                console.log('hihihi');
+                // ArrowRight
+
+                myPic.alt = parseInt(myPic.alt) + 1;
+                myPic.src = PICS[parseInt(myPic.alt)];
+                modal.style.display = "block";
+
+            }
+        };
+
+        window.oncontextmenu = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            } else {
+                console.log('nonono');
+                // ArrowRight
+
+                myPic.alt = parseInt(myPic.alt) - 1;
+                myPic.src = PICS[parseInt(myPic.alt)];
+                modal.style.display = "block";
+
+            }
+        };
+
+        // handy esc,arrowkey browsing
+        document.onkeydown = function (event) {
+            if (event.keyCode === 27) {
+                // escape
+
+                document.getElementById("myModal").style.display = "none";
+            } else if (event.keyCode === 76 || event.keyCode === 39) {
+                // ArrowRight
+
+                myPic.alt = parseInt(myPic.alt) + 1;
+                myPic.src = PICS[parseInt(myPic.alt)];
+                modal.style.display = "block";
+
+                console.log("SPG: alt: " + myPic.alt + " src: " + myPic.src);
+            } else if (event.keyCode === 72 || event.keyCode === 37) {
+                // ArrowLeft
+
+                myPic.alt = parseInt(myPic.alt) - 1;
+                myPic.src = PICS[parseInt(myPic.alt)];
+                modal.style.display = "block";
+                // console.log("SPG: " + event.key + " code: " + event.keyCode)
+            } else if (event.keyCode === 74) {
+                window.scrollBy(0, 50);
+            } else if (event.keyCode === 75) {
+                window.scrollBy(0, -50);
+            } else if (event.keyCode === 70) {
+                window.scrollBy(0, 100);
+            } else if (event.keyCode === 65) {
+                window.scrollBy(0, -100);
+            } else if (event.keyCode === 73) {
+                var zoomPercent = 150;
+                win.zoomLevel = Math.log(zoomPercent / 100) / Math.log(1.2);
+            } else if (event.keyCode === 79) {
+                var zoomPercent = 50;
+                win.zoomLevel = Math.log(zoomPercent / 100) / Math.log(1.2);
+            }
+
+        };
+
+        console.log("SPG3: " + nw.App.argv[0]);
+
+        //let mydir = path.dirname(nw.App.argv[0])
+        let mydir = nw.App.argv[0];
+        //console.log('SPG3: ' + mydir)
+        // mydir = path.relative('.', mydir)
+        //console.log('SPG4: ' + mydir)
+
+        PICS = fs
+            .readdirSync(mydir)
+            .map(pic => path.join(mydir, pic))
+            .map(fname => "file://" + fname);
+        console.log(JSON.stringify(PICS));
+
+        setupGallery(1);
+    </script>
 </body>
 
 </html>
